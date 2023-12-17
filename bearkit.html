@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <title>곰</title>
+
+    <style>
+      .container {
+        width: 1100px;
+        height: 700px;
+        text-align: center;
+      }
+
+     .container2 {
+        position: absolute;
+        width: 1100px;
+        height: 700px;
+        text-align: center;
+        z-index:-1;
+      }
+
+      #img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .small{
+        width:110px;
+        height:70px;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <div class="container2">
+    <img src="./images/background.png" />
+    </div>
+
+    <div class="container">
+    <img id="img" src="./images/base0.png" />
+    </div>
+
+    <div id="cols">
+    <button class="btn" src="./images/base0.png">base0</button>
+    <button class="btn" src="./images/base1.png">base1</button>
+    <button class="btn" src="./images/base2.png">base2</button>
+    <button class="btn" src="./images/base3.png">base3</button>
+
+    </div> 
+
+
+
+  <script>
+var pic = document.querySelector("#img");
+var cols = document.querySelectorAll("#cols .btn");
+
+for (var i = 0; i < cols.length; i++) {
+  cols[i].addEventListener("click", click);
+}
+
+function click(e) {
+ var colsAttribute = this.getAttribute("src");
+ pic.setAttribute("src",colsAttribute);
+}
+ 
+  </script>
+
+
+  </body>
+</html>

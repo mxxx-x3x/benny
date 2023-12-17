@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+ <meta charset="UTF-8">
+ <title>MAKE</title>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+ <style>
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+}
+
+
+
+button {
+  border:none;
+  background-color:transparent;
+}
+
+#lika-a-picrew
+{
+  position:relative;
+  top:50px;
+  width:100vw;
+  height: 100vh;
+  display:flex;
+  align-items: center 
+}
+
+#lika-a-picrew a
+{
+  cursor:pointer;
+}
+
+#part-container
+{
+  position:absolute;
+  z-index:12;
+  right:3vw;
+  height:520px;
+  width:280px;
+  display:none;
+  background-color: #f2efeb;
+  border-radius:30px;
+  overflow-y:scroll ;
+
+}
+
+/* 스크롤바 설정*/
+#part-container::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* 스크롤바 막대 설정*/
+#part-container::-webkit-scrollbar-thumb{
+    background: #E0D2C3;
+    border-radius: 25px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+#part-container::-webkit-scrollbar-track{
+    background-color:transparent;
+    border-radius: 25px;
+}
+
+
+.part-blind
+{
+  padding-left: 20px;
+  position:absolute;
+  z-index:11;
+  right:3vw;
+  height:520px;
+  width:270px;
+  background-color: #f2efeb;
+  font-size:15px;
+  border-radius:30px;
+  display:flex;
+  align-items: center;
+}
+
+#part-container button
+{
+  display:none;
+}
+
+#part-container button img
+{
+  max-width:100%;
+}
+
+#source-container
+{
+  position:fixed;
+  top:50px;
+  left:-3vw;
+  height: 100vh;
+  width:100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center
+
+}
+
+#source-container img {
+    height:70%;
+}
+
+#source-container .part-on
+{
+  position:absolute;
+}
+
+
+#part-ui{
+}
+
+
+
+
+/*여기부터 내 코드임*/
+
+
+.list {
+  position: absolute;
+  z-index:30;
+  left:3vw;
+  width:100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+        position: fixed;
+        top:50px;
+        left:-3vw;
+        height: 100vh;
+        width:100vw;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+.container img {
+    height:70%;
+}
+
+
+.button1 {
+  font-size:20px;
+  font-weight: bold;
+  padding:15px;
+  width:100px;
+  height:100px;
+  text-align:center;
+  background:white;
+  border-radius:40px;
+  margin:10px;
+  list-style:none;
+  background-color: #f2efeb
+
+}
+
+.button1 img {
+    width:100%;
+}
+
+
+/* 메뉴바 */
+
+#topMenu {
+    position:fixed;
+    z-index: 35;
+    top:0;
+    left:0;
+    height:90px;
+    width:100%;
+    overflow:hidden;
+}
+
+#topMenu div {
+    list-style: none;
+    float:left;
+    margin-right: 10px;
+    line-height:90px;
+    vertical-align: middle;
+    text-align:center;
+}
+
+#topMenu .menuLink {
+    text-decoration:none; 
+    color:black;
+    display:block;
+    width:250px;
+    font-size:18px;
+    font-weight: bold;
+}
+
+#topMenu .menuLink:hover {
+    color:#e5d9cd;
+}
+
+.logo1 {
+    width:200px;
+    height:90px;
+    display:flex;
+    margin-left:10px ;
+    justify-content: center;
+    align-items: center
+}
+
+.logo1 img {
+    height:60%;
+
+}
+
+
+.minilogo {
+    position:absolute;
+    right:0px;
+    width:200px;
+    height:90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.minilogo img {
+    height:60%;
+}
+
+
+/* 메뉴바 끝 */
+
+.a {
+height:100px;
+width:100px;
+margin:15px;
+}
+
+.b{
+height:100px;
+width:100px;
+margin:15px;
+}
+
+.c{
+height:100px;
+width:100px;
+margin:15px;
+}
+
+.d{
+height:100px;
+width:100px;
+margin:15px;
+}
+
+.e{
+height:100px;
+width:100px;
+margin:15px;
+}
+
+ </style>
+
+</head>
+
+
+<body>
+
+  <div id="topMenu">
+
+        <div class="logo1"><a class ="logo1" href="index.html"><img src="./images/logo.png"/></a></div>
+        <div><a class="menuLink" href="about.html">ABOUT</a></div>
+        <div><a class="menuLink" href="characters.html">CHARACTERS</a></div>
+        <div><a class="menuLink" href="make.html">BEAR KIT</a></div>
+        <div class="minilogo"><img src="./images/minilogo.png"/></div>
+  </div>
+
+
+
+<div id="lika-a-picrew">
+
+
+  <div id="source-container">
+  <img src="./images/background.png"/>
+  </div>
+
+<div class="part-blind">
+  <div>
+  <div style="font-weight: bold;">
+  취향에 맞게 베니를 장식하고<br>
+  나만의 인형으로 완성해 보세요.<br><br>
+  </div>
+  왼쪽 카테고리를 누르면 <br>
+  꾸밀 수 있는 아이템 목록이 나와요.<br>
+  원하는 아이템을 클릭해서<br>
+  베니에게 달아주세요.<br><br>
+
+  완성된 디자인은<br>
+  하나뿐인 인형으로 제작되며,<br>
+  밖에서도 함께할 수 있는<br>
+  AR 카드의 형태로도 배송돼요.<br><br>
+
+  처음부터 다시 하고 싶다면<br>
+  F5를 눌러주세요.
+ </div>
+</div>
+
+
+<div class="list">
+  <div id="part-ui"> <!--파트 목록 출력 UI-->
+    <button class="button1"><a class="color"><img src="./images/color.png"/></a></button>
+    <button class="button1"><a class="eyes"><img src="./images/eye.png"/></a></a></button>
+    <button class="button1"><a class="dot"><img src="./images/dot.png"/></a></a></button>
+    <button class="button1"><a class="clothes"><img src="./images/back.png"/></a></a></button>
+    <button class="button1"><a class="hat"><img src="./images/hat.png"/></a></a></button>
+  </div>
+</div>
+
+  <div id="part-container"> <!--파트 내용 출력 UI-->
+    <button class="color a" src="./images/color1-1.png"><img src="./images/color1.png"/></button>
+    <button class="color a" src="./images/color2-1.png"><img src="./images/color2.png"/></button>
+    <button class="color a" src="./images/color3-1.png"><img src="./images/color3.png"/></button>
+    <button class="color a" src="./images/color4-1.png"><img src="./images/color4.png"/></button>
+    <button class="color a" src="./images/color5-1.png"><img src="./images/color5.png"/></button>
+
+    <button class="dot b" src="./images/dot1-1.png"><img src="./images/dot1.png"/></button> 
+    <button class="dot b" src="./images/dot2-1.png"><img src="./images/dot2.png"/></button>
+    <button class="dot b" src="./images/dot3-1.png"><img src="./images/dot3.png"/></button>
+    <button class="dot b" src="./images/dot4-1.png"><img src="./images/dot4.png"/></button>
+    <button class="dot b" src="./images/base0.png"><img src="./images/not.png"/></button>
+
+
+    <button class="eyes c" src="./images/eye1-1.png"><img src="./images/eye1.png"/></button>
+    <button class="eyes c" src="./images/eye2-1.png"><img src="./images/eye2.png"/></button>
+    <button class="eyes c" src="./images/eye3-1.png"><img src="./images/eye3.png"/></button>
+    <button class="eyes c" src="./images/eye4-1.png"><img src="./images/eye4.png"/></button>
+    <button class="eyes c" src="./images/eye5-1.png"><img src="./images/eye5.png"/></button>
+    <button class="eyes c" src="./images/eye6-1.png"><img src="./images/eye6.png"/></button>
+    <button class="eyes c" src="./images/eye7-1.png"><img src="./images/eye7.png"/></button>
+    <button class="eyes c" src="./images/eye8-1.png"><img src="./images/eye8.png"/></button>
+    <button class="eyes c" src="./images/eye8-1.png"><img src="./images/eye8.png"/></button>
+
+    <button class="clothes d" src="./images/back1-1.png"><img src="./images/back1.png"/></button>
+    <button class="clothes d" src="./images/back2-1.png"><img src="./images/back2.png"/></button>
+    <button class="clothes d" src="./images/back3-1.png"><img src="./images/back3.png"/></button>
+    <button class="clothes d" src="./images/back4-1.png"><img src="./images/back4.png"/></button>
+    <button class="clothes d" src="./images/back5-1.png"><img src="./images/back5.png"/></button>
+    <button class="clothes d" src="./images/base0.png"><img src="./images/not.png"/></button>
+
+    
+    <button class="hat e" src="./images/hat1-1.png"><img src="./images/hat1.png"/></button>
+    <button class="hat e" src="./images/hat2-1.png"><img src="./images/hat2.png"/></button>
+    <button class="hat e" src="./images/hat3-1.png"><img src="./images/hat3.png"/></button>
+    <button class="hat e" src="./images/hat4-1.png"><img src="./images/hat4.png"/></button>
+    <button class="hat e" src="./images/base0.png"><img src="./images/not.png"/></button>
+  </div>
+
+
+
+</div>
+
+
+
+    <div class="container">
+    <img id="ba1" src="./images/base0.png" />
+    </div>
+
+    <div class="container">
+    <img id="ba2" src="./images/base0.png" />
+    </div>
+
+    <div class="container">
+    <img id="ba3" src="./images/base0.png" />
+    </div>
+
+    <div class="container">
+    <img id="ba4" src="./images/base0.png" />
+    </div>
+
+    <div class="container">
+    <img id="ba5" src="./images/base0.png" />
+    </div>
+
+
+
+<!--이미지소스끝 스크립트시작-->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+ </script>
+
+
+
+<script>
+$("#part-ui a").on("click",function(){
+$("#part-container button").css("display","");  
+$("#part-container").css("display","block");
+  var clss = $(this).attr("class");
+$("#part-container ." + clss).css("display","inline-block");
+});
+</script>
+
+
+  <script>
+var pic1 = document.querySelector("#ba1");
+var col1 = document.querySelectorAll("#part-container .a");
+
+for (var i = 0; i < col1.length; i++) {
+  col1[i].addEventListener("click", click);
+}
+
+function click(e) {
+ var col1Attribute = this.getAttribute("src");
+ pic1.setAttribute("src",col1Attribute);
+}
+ 
+
+  </script>
+
+  <script>
+
+var pic2 = document.querySelector("#ba2");
+var col2 = document.querySelectorAll("#part-container .b");
+
+for (var i = 0; i < col2.length; i++) {
+  col2[i].addEventListener("click", click);
+}
+
+function click(e) {
+ var col2Attribute = this.getAttribute("src");
+ pic2.setAttribute("src",col2Attribute);
+}
+ 
+
+  </script>
+
+
+  <script>
+
+var pic3 = document.querySelector("#ba3");
+var col3 = document.querySelectorAll("#part-container .c");
+
+for (var i = 0; i < col3.length; i++) {
+  col3[i].addEventListener("click", click);
+}
+
+function click(e) {
+ var col3Attribute = this.getAttribute("src");
+ pic3.setAttribute("src",col3Attribute);
+}
+ 
+
+  </script>
+
+
+
+  <script>
+
+var pic4 = document.querySelector("#ba4");
+var col4 = document.querySelectorAll("#part-container .d");
+
+for (var i = 0; i < col4.length; i++) {
+  col4[i].addEventListener("click", click);
+}
+
+function click(e) {
+ var col4Attribute = this.getAttribute("src");
+ pic4.setAttribute("src",col4Attribute);
+}
+ 
+
+  </script>
+
+
+
+  <script>
+
+var pic5 = document.querySelector("#ba5");
+var col5 = document.querySelectorAll("#part-container .e");
+
+for (var i = 0; i < col5.length; i++) {
+  col5[i].addEventListener("click", click);
+}
+
+function click(e) {
+ var col5Attribute = this.getAttribute("src");
+ pic5.setAttribute("src",col5Attribute);
+}
+ 
+
+  </script>
+
+
+
+</body>
+
+</html>

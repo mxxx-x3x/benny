@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+ <meta charset="UTF-8">
+ <title>BENNY</title>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+ <style>
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+   overflow:hidden;
+}
+
+
+#topMenu {
+    position:fixed;
+    z-index: 25;
+    top:0;
+    left:0;
+    height:90px;
+    width:100%;
+    background-color:white;
+    overflow:hidden;
+}
+
+#topMenu div {
+    list-style: none;
+    background-color:white;
+    float:left;
+    margin-right: 10px;
+    line-height:90px;
+    vertical-align: middle;
+    text-align:center;
+}
+
+#topMenu .menuLink {
+    text-decoration:none; 
+    color:black;
+    display:block;
+    width:250px;
+    font-size:18px;
+    font-weight: bold;
+}
+
+#topMenu .menuLink:hover {
+    color:#e5d9cd;
+}
+
+.logo1 {
+    width:200px;
+    height:90px;
+    margin-left:10px ;
+    display:flex;
+    justify-content: center;
+    align-items: center
+}
+
+.logo1 img {
+    height:60%;
+
+}
+
+.main1 {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -10;
+    height: 100vh;
+    width: 100vw;
+}
+
+.minilogo {
+    position:absolute;
+    right:0px;
+    width:200px;
+    height:90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.minilogo img {
+    height:60%;
+}
+
+/* 메뉴바 끝, 이하 슬라이드 배너 */
+
+.slidebox {
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer {
+  position:relative;
+  top:45px;
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+.inner-list {
+  display: flex;
+  transition: .3s ease-out;
+  height: 100%;
+}
+
+.inner {
+
+}
+
+.inner-in {
+   widht:1200px;
+   height:600px;
+   display:flex;
+   justify-content: center;
+   overflow:hidden;
+}
+
+.inner-in img {
+   height:100%;
+}
+
+.button-list1 {
+  text-align: center;
+  position: fixed;
+  top:0px;
+  left:50px;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-list2 {
+  text-align: center;
+  position: fixed;
+  top:0px;
+  right:50px;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-left {
+    position: relative;
+    top:45px;
+    height:80px;
+    border:none;
+    background-color:transparent;
+}
+
+.button-left img {
+    height:100%;
+}
+
+.button-right {
+    position: relative;
+    top:45px;
+    height:80px;
+    border:none;  
+    background-color:transparent;
+}
+
+
+.button-right img {
+    height:100%;
+}
+
+/* 슬라이드 배너 끝 */
+
+
+.gif {
+    position:fixed;
+    z-index:100;
+    bottom:-10px;
+    right:10px;
+    width:800px;
+}
+
+.gif img {
+    width:100%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+ <div id="topMenu">
+
+        <div class="logo1"><a class ="logo1" href="index.html"><img src="./images/logo.png"/></a></div>
+        <div><a class="menuLink" href="about.html">ABOUT</a></div>
+        <div><a class="menuLink" href="characters.html">CHARACTERS</a></div>
+        <div><a class="menuLink" href="make.html">BEAR KIT</a></div>
+        <div class="minilogo"><img src="./images/minilogo.png"/></div>
+  </div>
+
+
+
+<div class="gif">
+    <img src="./images/gif.png"/>
+</div>
+
+
+<!--슬라이드박스-->
+
+<div class="slidebox">
+ <div class="outer">
+  <div class="inner-list">
+
+    <div class="inner">
+        <div class="inner-in">
+      <img src="./images/cha1.png"/>
+        </div>
+        <div style="font-size:15px;">
+      <br><br><b>#봄 #디저트 #행복</b><br><br>
+      <div style="color:#888;">
+개나리가 피는 계절에 태어났어요.<br>
+초콜릿, 푸딩, 머핀... 먹는 것이 가장 즐겁습니다.<br>
+빵을 굽는 일을 좋아해요!
+     </div>
+       </div>
+    </div>
+
+    <div class="inner">
+      <div class="inner-in">
+      <img src="./images/cha2.png"/>
+        </div>
+        <div style="font-size:15px;">
+      <br><br><b>#휴식 #행운 #숲</b><br><br>
+      <div style="color:#888;">     
+일하는 건 너무 피곤한 일이에요.<br>
+자동차와 빌딩이 즐비한 도시에서 벗어나,<br>
+잎이 가득한 숲속으로 도망치고 싶은 날도 있는 법이죠.
+      </div>
+       </div>
+    </div>
+
+    <div class="inner">
+      <div class="inner-in">
+      <img src="./images/cha3.png"/>
+        </div>
+        <div style="font-size:15px;">
+      <br><br><b>#패션 #데이트 #외출</b><br><br>
+      <div style="color:#888;">
+내 취향으로 나를 꾸미는 것은 활력을 줘요.<br>
+좋아하는 색, 좋아하는 리본.<br>
+좋아하는 사람과 함께 걷는다면 가장 좋겠어요.
+     </div>
+       </div>
+    </div>
+
+
+  </div>
+ </div>
+</div>
+
+<div class="button-list1">
+  <button class="button-left"><img src="./images/left.png"/></button>
+</div>
+
+<div class="button-list2">
+  <button class="button-right"><img src="./images/right.png"/></button>
+</div>
+
+<script>
+/*
+  div사이즈 동적으로 구하기
+*/
+const outer = document.querySelector('.outer');
+const innerList = document.querySelector('.inner-list');
+const inners = document.querySelectorAll('.inner');
+let currentIndex = 0; // 현재 슬라이드 화면 인덱스
+
+inners.forEach((inner) => {
+  inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+})
+
+innerList.style.width = `${outer.clientWidth * inners.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
+
+/*
+  버튼에 이벤트 등록하기
+*/
+const buttonLeft = document.querySelector('.button-left');
+const buttonRight = document.querySelector('.button-right');
+
+buttonLeft.addEventListener('click', () => {
+  currentIndex--;
+  currentIndex = currentIndex < 0 ? 0 : currentIndex; // index값이 0보다 작아질 경우 0으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+});
+
+buttonRight.addEventListener('click', () => {
+  currentIndex++;
+  currentIndex = currentIndex >= inners.length ? inners.length - 1 : currentIndex; // index값이 inner의 총 개수보다 많아질 경우 마지막 인덱스값으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+});
+
+
+</script>
+
+
+
+</body>
+
+</html>

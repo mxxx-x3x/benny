@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+ <meta charset="UTF-8">
+ <title>BENNY</title>
+ <link rel="icon", href="./images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+ <style>
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#topMenu {
+    position:fixed;
+    z-index: 25;
+    top:0;
+    left:0;
+    height:90px;
+    width:100%;
+
+    overflow:hidden;
+}
+
+#topMenu div {
+    list-style: none;
+
+    float:left;
+    margin-right: 10px;
+    line-height:90px;
+    vertical-align: middle;
+    text-align:center;
+}
+
+#topMenu .menuLink {
+    text-decoration:none; 
+    color:black;
+    display:block;
+    width:250px;
+    font-size:18px;
+    font-weight: bold;
+}
+
+#topMenu .menuLink:hover {
+    color:#e5d9cd;
+}
+
+.logo1 {
+    width:200px;
+    height:90px;
+    display:flex;
+    margin-left:10px ;
+    justify-content: center;
+    align-items: center
+}
+
+.logo1 img {
+    height:60%;
+
+}
+
+
+.minilogo {
+    position:absolute;
+    right:0px;
+    width:200px;
+    height:90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.minilogo img {
+    height:60%;
+}
+
+/* 메뉴바 */
+
+.main1 {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -10;
+    height: 100vh;
+    width: 100vw;
+    background: url(./images/mainani.png) no-repeat center;
+    background-size: cover;
+}
+
+ </style>
+
+</head>
+
+<body>
+  <div id="topMenu">
+
+        <div class="logo1"><a class ="logo1" href="index.html"><img src="./images/logo.png"/></a></div>
+        <div><a class="menuLink" href="about.html">ABOUT</a></div>
+        <div><a class="menuLink" href="characters.html">CHARACTERS</a></div>
+        <div><a class="menuLink" href="make.html">BEAR KIT</a></div>
+        <div class="minilogo"><img src="./images/minilogo.png"/></div>
+  </div>
+
+  <div class="main1">
+    
+  </div>
+
+
+
+</body>
+
+</html>
